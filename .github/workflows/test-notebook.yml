@@ -2,9 +2,9 @@ name: Test Notebook Code
 
 # Trigger the workflow on push events to all branches
 on:
-  pull_request:
+  push:
     branches:
-    - main
+    - "*"
 
 jobs:
   test:
