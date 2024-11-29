@@ -1,5 +1,5 @@
 import pytest
-import Mixed_Language_Demo as databrics_code  # Import the module
+import mixed_language_demo as databrics_code  # Import the module
 
 def test_dataframe_creation():
     """
