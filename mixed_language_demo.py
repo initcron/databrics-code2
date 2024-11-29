@@ -101,5 +101,4 @@ if __name__ == "__main__":
 
 # Python: Stop all active sessions to minimize costs
 # This ensures you don't leave any expensive resources running
-spark.catalog.clearCache()
 
