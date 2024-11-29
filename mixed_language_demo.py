@@ -11,22 +11,40 @@
 # MAGIC 4. Add comments and explanations using Markdown.
 # MAGIC 5. One more comment
 # MAGIC
+# MAGIC
 
 # COMMAND ----------
 
-# Python: Create a sample data frame and display it
+# COMMAND ----------
+
+# Python: Create a sample data frame with Amar, Akbar, and Anthony 
 import pandas as pd
 
 # Sample data
-data = {"Name": ["Alice", "Bob", "Charlie"], "Age": [25, 30, 35], "Salary": [50000, 60000, 70000]}
-df = pd.DataFrame(data)
+data = {
+    "Name": ["Amar", "Akbar", "Anthony"],
+    "Age": [25, 30, 35],
+    "Salary": [50000, 60000, 70000],
+    "Department": ["HR", "IT", "Finance"]
+}
 
-# Convert to Spark DataFrame
-spark_df = spark.createDataFrame(df)
+def create_dataframe():
+    """
+    Function to create a Pandas DataFrame
+    """
+    return pd.DataFrame(data)
 
-# Display the Spark DataFrame
-display(spark_df)
+def print_dataframe_summary(df):
+    """
+    Print a summary of the DataFrame
+    """
+    print("DataFrame Summary:")
+    print(df.describe())
 
+# If running directly, create the DataFrame and display the summary
+if __name__ == "__main__":
+    df = create_dataframe()
+    print_dataframe_summary(df)
 
 # COMMAND ----------
 
@@ -39,14 +57,12 @@ display(spark_df)
 
 # COMMAND ----------
 
-R: Perform basic operations
-# Load a small vector of numbers and calculate their mean
-numbers <- c(10, 20, 30, 40, 50)
-mean_value <- mean(numbers)
-
-# Print the mean value
-print(paste("The mean of the numbers is:", mean_value))
-
+# MAGIC %md
+# MAGIC ### Python Code Explanation:
+# MAGIC - Created a Pandas DataFrame with sample data (Name, Age, Salary, Department).
+# MAGIC - Converted it into a Spark DataFrame for use in Databricks.
+# MAGIC - Displayed the Spark DataFrame using the `display` function.
+# MAGIC
 
 # COMMAND ----------
 
