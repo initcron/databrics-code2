@@ -11,27 +11,40 @@
 # MAGIC 4. Add comments and explanations using Markdown.
 # MAGIC 5. One more comment
 # MAGIC
+# MAGIC
 
 # COMMAND ----------
 
-# Python: Create a sample data frame with additional column and display it
+# COMMAND ----------
+
+# Python: Create a sample data frame with Amar, Akbar, and Anthony 
 import pandas as pd
 
-# Sample data with an added 'Department' column
+# Sample data
 data = {
     "Name": ["Amar", "Akbar", "Anthony"],
     "Age": [25, 30, 35],
     "Salary": [50000, 60000, 70000],
     "Department": ["HR", "IT", "Finance"]
 }
-df = pd.DataFrame(data)
 
-# Convert to Spark DataFrame
-spark_df = spark.createDataFrame(df)
+def create_dataframe():
+    """
+    Function to create a Pandas DataFrame
+    """
+    return pd.DataFrame(data)
 
-# Display the updated Spark DataFrame
-display(spark_df)
+def print_dataframe_summary(df):
+    """
+    Print a summary of the DataFrame
+    """
+    print("DataFrame Summary:")
+    print(df.describe())
 
+# If running directly, create the DataFrame and display the summary
+if __name__ == "__main__":
+    df = create_dataframe()
+    print_dataframe_summary(df)
 
 # COMMAND ----------
 
