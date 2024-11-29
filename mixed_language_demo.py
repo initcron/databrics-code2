@@ -9,7 +9,6 @@
 # MAGIC 2. Use R for basic calculations.
 # MAGIC 3. Execute SQL queries on an in-memory table.
 # MAGIC 4. Add comments and explanations using Markdown.
-# MAGIC 5. One more comment
 # MAGIC
 # MAGIC
 
